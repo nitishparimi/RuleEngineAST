@@ -91,7 +91,7 @@ http://localhost:9000/create
 
 ### Example 1: Create Rule
 ```json
-POST /api/rules/create
+POST /create
 {
   "rule_string": "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)"
 }
@@ -99,7 +99,7 @@ POST /api/rules/create
 
 ### Example 2: Combine Rules
 ```json
-POST /api/rules/combine
+POST /mergeRules
 {
   "rules": ["rule1", "rule2"]
 }
@@ -107,7 +107,7 @@ POST /api/rules/combine
 
 ### Example 3: Evaluate Rule
 ```json
-POST /api/rules/evaluate
+POST /evaluate
 {
   "data": {
     "age": 35,
